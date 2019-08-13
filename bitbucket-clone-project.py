@@ -29,8 +29,8 @@ __email__ = "andrew.kuttor@cis.ntt.com"
 def clone_repo(url, project):
     """ Clones all BitBucket repos within a Project """
     domain = 'https://{0}'.format(url)
-    username = 'andrew.kuttor'
-    password = 'Sheas1731!'
+    username = ''
+    password = ''
 
     bitbucket = connect(domain, username, password)
     repos = bitbucket.projects[project].repos.list()
