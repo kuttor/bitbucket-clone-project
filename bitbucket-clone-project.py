@@ -24,8 +24,8 @@ __email__ = "andrew.kuttor@cis.ntt.com"
 
 
 @command()
-@option('-u', '--url', default='', help='Domain of the BitBucket server')
-@option('-p', '--project', default='', help='Name of BitBucket project.')
+@option('-u', '--url', default='', help='BitBucket server')
+@option('-p', '--project', default='', help='BitBucket project')
 def clone_repo(url, project):
     """ Clones all BitBucket repos within a Project """
     domain = 'https://{0}'.format(url)
@@ -44,6 +44,7 @@ def clone_repo(url, project):
 
 def main():
     clone_repo()
+
 
 if __name__ == '__main__':
     main()
