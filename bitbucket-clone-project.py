@@ -29,14 +29,14 @@ __email__ = "andrew.kuttor@cis.ntt.com"
 def clone_repo(url, project):
     """ Clones all BitBucket repos within a Project """
     domain = 'https://{0}'.format(url)
-    username = ''
-    password = ''
+    username = 'andrew.kuttor'
+    password = 'Sheas1731!'
 
     bitbucket = connect(domain, username, password)
-    projects = bitbucket.projects.list()
+    repos = bitbucket.projects[project].repos.list()
 
     for project in projects:
-        for repo in bitbucket.projects[project["key"]].repos.list():
+        for repo in repos:
             for url in repo["links"]["clone"]:
                 if (url["name"] == "ssh"):
                     system("git clone {0}".format(url["href"]))
