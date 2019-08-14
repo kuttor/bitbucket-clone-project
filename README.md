@@ -12,11 +12,11 @@ Requirements
 
 Example Execution
 ------------
-$ ./project-cloner.py -d bitbucket.mcp-services.com -p AR -U linus
+$ ./project-cloner.py -d bitbucket.example.com -p AR -U linus
 
 or
 
-$ ./project-cloner.py --domain bitbucket.mcp-services.com --project AR --username linus
+$ ./project-cloner.py --domain bitbucket.example.com --project devops --username linus
 
 
 Author Information
